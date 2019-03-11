@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script type="text/javascript" src="./jquery-3.3.1.min.js"></script>
+        
+    </head>
+    <body onload="s()">
+        <div>welcome: <span id="name"></span></div>
+        <div>logout? <a href="/logout">click here</a></div>
+        <script type="text/javascript">
+            function s(){
+                //document.getElementById("name").innerHTML = "aa";
+                $.ajax({
+                    url:'/me',
+                    type:"get",
+                    dataType: 'json',
+                }).then(function(response){
+                    document.getElementById("name").innerHTML = response.name;
+                }, function(response){
+                    
+                });
+            }
+
+        </script>
+    </body>
+
+</html>
