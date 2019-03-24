@@ -1,12 +1,14 @@
 *.settings
 *.idea
 *.classpath
+
 *.iml
 *.project
 *.DS_Store
 *.externalToolBuilders
 *.log
 /bin/
+/target/
 /out/
 /dist/
 /node_modules/
